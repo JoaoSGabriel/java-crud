@@ -1,5 +1,23 @@
 package api.example.crud.dto;
 
-public record CarDTO(String modelo, String fabricante, String dataFabricacao, double valor, int anoModelo) {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record CarDTO(
+    @NotBlank
+    String modelo, 
+
+    @NotBlank
+    String fabricante, 
+
+    @NotBlank
+    String dataFabricacao, 
+
+    @NotNull
+    double valor, 
+
+    @NotNull
+    int anoModelo
+) {
     
 }
